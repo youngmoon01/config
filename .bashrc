@@ -136,6 +136,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 # ubuntu installed in windows 10 specific
 export DESKTOP='/mnt/c/Users/user/Desktop'
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# SDK for gradle
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/youngmoon01/.sdkman"
 [[ -s "/home/youngmoon01/.sdkman/bin/sdkman-init.sh" ]] && source "/home/youngmoon01/.sdkman/bin/sdkman-init.sh"

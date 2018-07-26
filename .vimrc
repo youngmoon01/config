@@ -26,6 +26,7 @@ set tags+=/usr/include/tags
 filetype on
 filetype plugin on
 set mouse=a
+set encoding=utf-8
 
 colorscheme youngmoon
 
@@ -64,16 +65,19 @@ let html_use_css=1
 set modeline
 set modelines=5
 
-"javacomplete2 settings
-set completeopt+=noinsert
-set completeopt+=menuone
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-let g:JavaComplete_LibsPath = '/home/youngmoon01/TeraZerg/include/bwmirror_v2_5.jar'
-let g:JavaComplete_JavaviDebug = 1
-let g:JavaComplete_JavaviLogfileDirectory = '/home/youngmoon01/log'
-"let g:JavaComplete_SourcesPath = '/home/youngmoon01/TeraZerg/src/main/TeraZerg.java'
 
 "vim-plug setting
 call plug#begin('~/.vim/plugged')
-Plug 'artur-shaik/vim-javacomplete2'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
+
+"YouCompleteMe configuration
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:syntastic_java_checkers = []
+
+hi YcmErrorSection ctermfg=255 ctermbg=167
+hi YcmErrorSign ctermfg=255 ctermbg=167
+hi YcmWarningSection cterm=NONE ctermbg=58
+hi YcmWarningSign ctermfg=251 ctermbg=58
+hi Pmenu ctermfg=237 ctermbg=111
+hi PmenuSel ctermfg=111 ctermbg=237
