@@ -69,15 +69,19 @@ set modelines=5
 "vim-plug setting
 call plug#begin('~/.vim/plugged')
 Plug 'Valloric/YouCompleteMe'
+Plug '~/.fzf'
 call plug#end()
 
 "YouCompleteMe configuration
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:syntastic_java_checkers = []
-
 hi YcmErrorSection ctermfg=255 ctermbg=167
 hi YcmErrorSign ctermfg=255 ctermbg=167
 hi YcmWarningSection cterm=NONE ctermbg=58
 hi YcmWarningSign ctermfg=251 ctermbg=58
 hi Pmenu ctermfg=237 ctermbg=111
 hi PmenuSel ctermfg=111 ctermbg=237
+
+"fzf configuration
+map <C-f> <Nop>
+map <C-f> :FZF <CR>

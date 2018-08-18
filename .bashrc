@@ -127,12 +127,6 @@ export PATH=$PATH:/home/youngmoon01/bin
 export TERM=xterm-256color
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 
-# base 16 shell
-#BASE16_SHELL="$HOME/.config/base16-shell/"
-#[ -n "$PS1" ] && \
-#    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-#        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
 # ubuntu installed in windows 10 specific
 export DESKTOP='/mnt/c/Users/user/Desktop'
 
@@ -140,3 +134,7 @@ export DESKTOP='/mnt/c/Users/user/Desktop'
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/youngmoon01/.sdkman"
 [[ -s "/home/youngmoon01/.sdkman/bin/sdkman-init.sh" ]] && source "/home/youngmoon01/.sdkman/bin/sdkman-init.sh"
+
+# for the fzf to work
+export FZF_DEFAULT_COMMAND='find .'
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
