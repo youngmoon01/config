@@ -21,6 +21,7 @@ set esckeys
 set backspace=indent,eol,start
 set history=1000
 set iskeyword-=_
+set iskeyword-=-
 set tags+=./tags/,tags
 set tags+=/usr/include/tags
 filetype on
