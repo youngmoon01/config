@@ -28,6 +28,10 @@ filetype plugin on
 set mouse=a
 set encoding=utf-8
 
+if has('termguicolors')
+	set termguicolors
+endif
+
 " remember the last cursor location of the file
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
