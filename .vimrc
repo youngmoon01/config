@@ -91,16 +91,17 @@ endif
 
 "vim-plug setting
 call plug#begin('~/.vim/plugged')
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'joshdick/onedark.vim'
+Plug 'kaicataldo/material.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/csapprox'
 Plug '~/.fzf'
 call plug#end()
 
 "color-scheme related
-colorscheme onedark
+colorscheme material
 
 "nerd tree
 map <C-\> :NERDTreeFind <CR>
