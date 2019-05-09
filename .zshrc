@@ -43,8 +43,4 @@ export EDITOR=nvim
 # python alias
 alias py='python'
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/youngmoon01/.sdkman"
-[[ -s "/home/youngmoon01/.sdkman/bin/sdkman-init.sh" ]] && source "/home/youngmoon01/.sdkman/bin/sdkman-init.sh"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
