@@ -1,8 +1,7 @@
-source ~/.zplug/init.zsh
-
 ###########
 # ZPLUGS  #
 ###########
+source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "themes/gianu", from:oh-my-zsh, as:theme
 zplug "plugins/colorize", from:oh-my-zsh
