@@ -3,14 +3,14 @@ sy enable
 set t_Co=256
 set t_ut=
 set nocp
-set ts=2
-set sw=2
+set ts=4
+set sw=4
 set sts=0
 set nows
 set hls
 set cursorline
 set incsearch
-set noexpandtab
+set expandtab
 set autoindent
 set nu
 set ru
@@ -31,7 +31,6 @@ set encoding=utf-8
 if has('termguicolors')
 	set termguicolors
 endif
-
 
 " remember the last cursor location of the file
 au BufReadPost *
@@ -76,13 +75,16 @@ endif
 
 "vim-plug setting
 call plug#begin('~/.vim/plugged')
-"Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe' "uncomment this after building youcompleteme
 Plug 'scrooloose/nerdtree'
 Plug 'kaicataldo/material.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'godlygeek/csapprox'
-Plug '~/.fzf'
+"Plug '~/.fzf' " uncomment this after building fzf
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 call plug#end()
+
+"for python-mode
+let g:pymode_python = 'python3'
 
 "color-scheme related
 colorscheme material
