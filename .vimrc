@@ -81,6 +81,7 @@ Plug 'kaicataldo/material.vim'
 Plug 'sheerun/vim-polyglot'
 "Plug '~/.fzf' " uncomment this after building fzf
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'okcompute/vim-python-match'
 call plug#end()
 
 "for python-mode
