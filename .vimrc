@@ -86,6 +86,10 @@ call plug#end()
 
 "for python-mode
 let g:pymode_python = 'python3'
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_lint_on_fly = 1
+let g:pymode_lint_cwindow = 0
 
 "color-scheme related
 colorscheme material
