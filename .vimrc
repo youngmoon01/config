@@ -92,6 +92,8 @@ let g:pymode_lint_on_fly = 1
 let g:pymode_lint_cwindow = 0
 
 "color-scheme related
+"let g:material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker'
+let g:material_theme_style = 'darker'
 colorscheme material
 
 "nerd tree
