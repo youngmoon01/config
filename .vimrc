@@ -77,7 +77,7 @@ endif
 call plug#begin('~/.vim/plugged')
 "Plug 'Valloric/YouCompleteMe' "uncomment this after building youcompleteme
 Plug 'scrooloose/nerdtree'
-Plug 'kaicataldo/material.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 "Plug '~/.fzf' " uncomment this after building fzf
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
@@ -92,9 +92,7 @@ let g:pymode_lint_on_fly = 1
 let g:pymode_lint_cwindow = 0
 
 "color-scheme related
-"let g:material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker'
-let g:material_theme_style = 'darker'
-colorscheme material
+colorscheme onedark
 
 "nerd tree
 map <C-\> :NERDTreeFind <CR>
