@@ -113,3 +113,6 @@ hi PmenuSel ctermfg=111 ctermbg=237
 "fzf configuration
 map <C-f> <Nop>
 map <C-f> :FZF <CR>
+
+" remove trailing whitespaces on save
+autocmd BufWritePre * :%s/\s\+$//e
