@@ -1,4 +1,5 @@
 syntax on
+
 sy enable
 set t_Co=256
 set t_ut=
@@ -28,8 +29,8 @@ filetype plugin on
 set mouse=a
 set encoding=utf-8
 
-if has('termguicolors')
-	set termguicolors
+if has("termguicolors")
+  set termguicolors
 endif
 
 " remember the last cursor location of the file
@@ -75,40 +76,18 @@ endif
 
 "vim-plug setting
 call plug#begin('~/.vim/plugged')
-"Plug 'Valloric/YouCompleteMe' "uncomment this after building youcompleteme
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 "Plug '~/.fzf' " uncomment this after building fzf
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'okcompute/vim-python-match'
 call plug#end()
-
-"for python-mode
-let g:pymode_python = 'python3'
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_lint_on_fly = 1
-let g:pymode_lint_cwindow = 0
 
 "color-scheme related
 colorscheme onedark
 
 "nerd tree
 map <C-\> :NERDTreeFind <CR>
-
-"YouCompleteMe configuration
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:syntastic_java_checkers = []
-
-map <C-/> :YcmCompleter GoToDeclaration <CR>
-
-hi YcmErrorSection ctermfg=255 ctermbg=167 guibg=#804040 guifg=#ffffff
-hi YcmErrorSign ctermfg=255 ctermbg=167 guibg=#804040 guifg=#ffffff
-hi YcmWarningSection cterm=NONE ctermbg=58 guibg=#404020
-hi YcmWarningSign ctermfg=251 ctermbg=58 guibg=#404020
-hi Pmenu ctermfg=237 ctermbg=111
-hi PmenuSel ctermfg=111 ctermbg=237
 
 "fzf configuration
 map <C-f> <Nop>
