@@ -28,8 +28,6 @@ set editing-mode vi
 export PATH=$PATH:/home/youngmoon01/bin
 export TERM=xterm-256color
 
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
-
 
 # aliases
 alias ls="ls --color=auto"
