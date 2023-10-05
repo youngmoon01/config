@@ -20,8 +20,6 @@ set nuw=5
 set ls=2
 set backspace=indent,eol,start
 set history=1000
-set iskeyword-=_
-set iskeyword-=-
 set tags+=./tags/,tags
 set tags+=/usr/include/tags
 filetype on
@@ -78,13 +76,13 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
-Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/everforest'
 Plug 'sheerun/vim-polyglot'
 "Plug '~/.fzf' " uncomment this after building fzf
 call plug#end()
 
 "color-scheme related
-colorscheme onedark
+colorscheme everforest
 
 "nerd tree
 map <C-\> :NERDTreeFind <CR>
