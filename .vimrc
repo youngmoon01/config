@@ -20,8 +20,6 @@ set nuw=5
 set ls=2
 set backspace=indent,eol,start
 set history=1000
-set tags+=./tags/,tags
-set tags+=/usr/include/tags
 filetype on
 filetype plugin on
 set mouse=a
@@ -78,6 +76,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'sainnhe/everforest'
 Plug 'sheerun/vim-polyglot'
+Plug 'chaoren/vim-wordmotion'
 "Plug '~/.fzf' " uncomment this after building fzf
 call plug#end()
 
