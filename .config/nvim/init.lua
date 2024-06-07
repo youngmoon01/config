@@ -34,8 +34,8 @@ cmp.setup {
   mapping = cmp.mapping.preset.insert({
     ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up 4
     ['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down 4
-    ['<C-y>'] = cmp.mapping.scroll_docs(-4), -- Up 1
-    ['<C-e>'] = cmp.mapping.scroll_docs(4), -- Down 1
+    ['<C-y>'] = cmp.mapping.scroll_docs(-1), -- Up 1
+    ['<C-e>'] = cmp.mapping.scroll_docs(1), -- Down 1
     -- C-b (back) C-f (forward) for snippet placeholder navigation.
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<CR>'] = cmp.mapping.confirm {
