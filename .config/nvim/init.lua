@@ -7,6 +7,7 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+  use 'ray-x/lsp_signature.nvim'
 end)
 
 local lspconfig = require('lspconfig')
@@ -18,6 +19,7 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
     capabilities = capabilities,
+    inlay_hints = { enabled = true },
   }
 end
 
@@ -30,8 +32,10 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
-    ['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up 4
+    ['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down 4
+    ['<C-y>'] = cmp.mapping.scroll_docs(-4), -- Up 1
+    ['<C-e>'] = cmp.mapping.scroll_docs(4), -- Down 1
     -- C-b (back) C-f (forward) for snippet placeholder navigation.
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<CR>'] = cmp.mapping.confirm {
@@ -118,3 +122,17 @@ lspconfig.ruff_lsp.setup({
   end,
 })
 
+lspconfig.rust_analyzer.setup {
+  settings = {
+    ['rust-analyzer'] = {
+      diagnostics = {
+        enable = true;
+      }
+    },
+  },
+}
+
+local lsp_signature_config = {
+  always_trigger = true,
+}
+require("lsp_signature").setup(lsp_signature_config)
