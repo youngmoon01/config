@@ -18,7 +18,8 @@ alias vim='nvim'
 alias vi='nvim'
 alias vimdiff='nvim -d'
 
-alias py='python'
+alias py='python3'
+alias python='python3'
 
 export EDITOR=nvim
 set -o vi
@@ -30,6 +31,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "plugins/colorize", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/github", from:oh-my-zsh
+zplug "jeffreytse/zsh-vi-mode"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -40,3 +42,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+
+# source per-machine configurations
+source ~/.zshrc.machine
