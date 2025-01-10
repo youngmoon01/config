@@ -1,9 +1,10 @@
+# source per-machine configurations
+source ~/.zshrc.machine
+
 source ~/.zplug/init.zsh
 eval "$(starship init zsh)"
 
-
 source <(fzf --zsh)
-
 
 HISTSIZE=50000
 SAVEHIST=$HISTSIZE
@@ -42,6 +43,3 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
-
-# source per-machine configurations
-source ~/.zshrc.machine
