@@ -1,4 +1,5 @@
 # source per-machine configurations
+export PATH=$HOME/.local/bin:$PATH
 source ~/.zshrc.machine
 
 source ~/.zplug/init.zsh
@@ -26,8 +27,6 @@ export EDITOR=nvim
 set -o vi
 set editing-mode vi
 export TERM=xterm-256color
-export PATH=$HOME/.local/bin:$PATH
-
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "plugins/colorize", from:oh-my-zsh
