@@ -26,6 +26,7 @@ export EDITOR=nvim
 set -o vi
 set editing-mode vi
 export TERM=xterm-256color
+export PATH=$HOME/.local/bin:$PATH
 
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
