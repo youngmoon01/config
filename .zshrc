@@ -5,6 +5,7 @@ source ~/.zshrc.machine
 source ~/.zplug/init.zsh
 eval "$(starship init zsh)"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source <(fzf --zsh)
 
 HISTSIZE=50000
